@@ -16,7 +16,7 @@
 "."         { return DOT; }
 
 \'[^\']+\'  { 
-              yytext[yyleng-1] = '\0'; 
+              yytext[yyleng-1] = '\0';
               char *val = yytext + 1;
               /* trim trailing spaces if any (e.g. 'mytable ') */
               int len = strlen(val);
