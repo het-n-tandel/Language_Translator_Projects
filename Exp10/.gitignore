@@ -1,9 +1,10 @@
 # Ignore everything in this directory
 *
 
-# Except Lex (.l) and Yacc (.y) files
+# Except Lex (.l), Yacc (.y) and Markdown (.md) files
 !*.l
 !*.y
+!*.md
 
 # And also don't ignore this .gitignore file itself
 !.gitignore
