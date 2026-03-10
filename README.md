@@ -26,6 +26,13 @@ A suite of compiler design projects exploring lexical analysis, LL/LR parsing, a
 * **Output Example:** `select * from mytable;`
 * **Key Concepts:** Lexical analysis, Token mapping, Semantic analysis.
 
+### Experiment 10: Lex and Yacc based Language Translator
+**Goal:** Make language translator for given source and destination languages using Lex and Yacc.
+* **Description:** Implementation of a translator to convert custom Hindi-English queries into SQL using `lex` and `yacc`.
+* **Input Example:** `sab data chaiye 'mytable' sey.`
+* **Output Example:** `select * from mytable;`
+* **Key Concepts:** Lexical analysis with Flex, Syntax analysis with Bison (Yacc), Grammar definition.
+
 ### Dynamic LR Parser Generator
 **Goal:** Generate an LR Parser for any user-defined language *without* using external tools.
 * **Description:** A robust system that reads a grammar dynamically, handles left recursion/left factoring, computes First & Follow sets, and generates the parsing table.

@@ -1,0 +1,9 @@
+# Ignore everything in this directory
+*
+
+# Except Lex (.l) and Yacc (.y) files
+!*.l
+!*.y
+
+# And also don't ignore this .gitignore file itself
+!.gitignore
