@@ -18,12 +18,6 @@
 \'[^\']+\'  { 
               yytext[yyleng-1] = '\0';
               char *val = yytext + 1;
-              /* trim trailing spaces if any (e.g. 'mytable ') */
-              int len = strlen(val);
-              while(len > 0 && val[len-1] == ' ') {
-                val[len-1] = '\0';
-                len--;
-              }
               yylval.str = strdup(val);
               return STR; 
             }
