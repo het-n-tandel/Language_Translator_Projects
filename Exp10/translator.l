@@ -22,8 +22,9 @@
               return STR; 
             }
 
-[ \t\n]+    { /* ignore whitespace */ }
-.           { printf("Unknown character: %s\n", yytext); }
+[ \t]+      { /* ignore whitespace */ }
+\n          { return '\n'; }
+.           { return yytext[0]; }
 %%
 
 int yywrap() {

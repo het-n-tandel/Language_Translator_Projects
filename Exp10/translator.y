@@ -17,8 +17,8 @@ void yyerror(const char *s);
 
 %%
 
-queries: queries query
-       | query
+command: query '\n' { YYACCEPT; }
+       | error '\n' { YYABORT; }
        ;
 
 query: SAB DATA CHAIYE STR SEY DOT 
@@ -52,7 +52,7 @@ void yyerror(const char *s) {
 }
 
 int main() {
-  printf("Enter sentences (Ctrl+D to exit):\n");
+  printf("Enter sentences:\n");
   yyparse();
   return 0;
 }
